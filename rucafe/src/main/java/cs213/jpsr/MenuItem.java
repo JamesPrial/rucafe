@@ -8,6 +8,7 @@
  */
 
 public abstract class MenuItem {
+	//PRICE SHOULD NOT CHANGE AFTER INIT
 	private double price;
 
 	public MenuItem(){
@@ -18,20 +19,29 @@ public abstract class MenuItem {
 		this.price = price;
 	}
 	
+
+
 	/**
 	 * A public method that helps calculation
 	 * of the item price
 	 *
 	 * @return the price of the items in the order.
 	 */
-
-
-	public double getPrice() {
+	public double itemPrice(){
 		return this.price;
 	}
 
-	protected void setPrice(double price){
-		this.price = price;
+	
+	/**
+	 * updates this.price based on current state
+	 * @return this.price
+	 */
+	public double itemPrice(MenuItemPriceInterpretor priceInterpretor){
+		double interpretedPrice = priceInterpretor.getPrice(this);
+		if(this.price != interpretedPrice){
+			this.price = interpretedPrice;
+		}
+		return this.price;
 	}
 
 	/**

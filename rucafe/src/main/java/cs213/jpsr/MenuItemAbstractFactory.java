@@ -1,3 +1,3 @@
-public abstract class MenuItemAbstractFactory {
-
+public interface MenuItemAbstractFactory {
+    public MenuItem createMenuItem();
 }
