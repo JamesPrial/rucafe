@@ -53,5 +53,6 @@ public abstract class MenuItem {
 
 	public abstract MenuItem copy();
 
+	public abstract MenuItem createMenuItem();
 	
 }
