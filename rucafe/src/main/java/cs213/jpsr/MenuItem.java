@@ -1,3 +1,5 @@
+package cs213.jpsr;
+
 /**
  * A class defining the Menu Items of the store.
  * This class helps defining the basic functions which are
@@ -54,5 +56,16 @@ public abstract class MenuItem {
 	public abstract MenuItem copy();
 
 	public abstract MenuItem createMenuItem();
+
+	public int compareTo(Object obj){
+		if(obj instanceof MenuItem){
+			MenuItem menuObj = (MenuItem)obj;
+			if(this.price == menuObj.itemPrice()){
+				return 0;
+			}
+			return 1;
+		}
+		return -1
+	}
 	
 }

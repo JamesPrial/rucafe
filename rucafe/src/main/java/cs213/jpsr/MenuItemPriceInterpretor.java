@@ -1,3 +1,5 @@
+package cs213.jpsr;
+
 public class MenuItemPriceInterpretor {
     private static final double CAKE_PRICE = 1.59;
     private static final double HOLE_PRICE = 0.33;

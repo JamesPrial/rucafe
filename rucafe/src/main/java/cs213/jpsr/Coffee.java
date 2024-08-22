@@ -1,3 +1,5 @@
+package cs213.jpsr;
+
 import java.util.ArrayList;
 
 public class Coffee extends MenuItem implements Customizable {

@@ -1,3 +1,5 @@
+package cs213.jpsr;
+
 /** @enum mapper::DonutFlavors
  *
  * @author Swarnendu Roy

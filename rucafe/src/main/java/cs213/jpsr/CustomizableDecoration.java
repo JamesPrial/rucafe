@@ -1,3 +1,5 @@
+package cs213.jpsr;
+
 public class CustomizableDecoration<T> {
     T decoration;
     CustomizableDecoration<T> next;

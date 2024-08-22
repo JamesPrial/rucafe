@@ -1,3 +1,5 @@
+package cs213.jpsr;
+
 public abstract class CustomizableMenuItem extends MenuItem implements Customizable {
     private CustomizableDecoration<MenuItem> head;
     private int decorationCount;
@@ -16,6 +18,6 @@ public abstract class CustomizableMenuItem extends MenuItem implements Customiza
         }
        return false;
     }
-
+    protected abstract boolean isAddable(Object obj);
     public boolean remove
 }
