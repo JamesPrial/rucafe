@@ -1,6 +1,6 @@
-package cs213.jpsr;
+package cs213.jpsr.Abstractions;
 
-public class CustomizableDecoration<T> {
+public class CustomizableDecoration<T extends Comparable<Object>> {
     T decoration;
     CustomizableDecoration<T> next;
     public CustomizableDecoration() throws Exception{

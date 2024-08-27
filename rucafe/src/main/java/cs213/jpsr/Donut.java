@@ -2,7 +2,7 @@ package cs213.jpsr;
 
 
 
-public class Donut extends MenuItem {
+public class Donut extends MenuItemTemplate {
     
 
     private DonutFlavors flavor;

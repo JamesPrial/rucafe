@@ -1,5 +1,8 @@
 package cs213.jpsr;
 
+import cs213.jpsr.Abstractions.Customizable;
+import cs213.jpsr.Abstractions.CustomizableDecoration;
+
 public abstract class CustomizableTemplate<T> implements Customizable {
     private CustomizableDecoration<T> head;
     private int decorationCounter;

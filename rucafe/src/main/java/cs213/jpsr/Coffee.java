@@ -2,7 +2,9 @@ package cs213.jpsr;
 
 import java.util.ArrayList;
 
-public class Coffee extends MenuItem implements Customizable {
+import cs213.jpsr.Abstractions.Customizable;
+
+public class Coffee extends MenuItemTemplate implements Customizable {
 	private final int SHORT = 0;
 	private final int TALL = 1;
 	private final int GRANDE = 2;
@@ -104,4 +106,10 @@ public class Coffee extends MenuItem implements Customizable {
 		}
 		return ret;
 	}
+
+	@Override
+	public int compareTo(Object obj){
+		
+	}
 }
+

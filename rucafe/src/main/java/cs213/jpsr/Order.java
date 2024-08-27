@@ -2,6 +2,8 @@ package cs213.jpsr;
 
 import java.util.ArrayList;
 
+import cs213.jpsr.Abstractions.Customizable;
+
 /**
  * The order class helps defining the properties of order which implements
  * the interface customizable. The class' properties include
@@ -13,7 +15,7 @@ import java.util.ArrayList;
  */
 public class Order implements Customizable {
 	private int orderNum;
-	private ArrayList<MenuItem> orderItems;
+	private ArrayList<MenuItemTemplate> orderItems;
 	private final double tax_rate = 6.625/100;
 
 	/**
@@ -24,7 +26,7 @@ public class Order implements Customizable {
 	 */
 	public Order() {
 		this.orderNum = 0;
-		orderItems = new ArrayList<MenuItem>();
+		orderItems = new ArrayList<MenuItemTemplate>();
 	}
 
 	/**
@@ -36,7 +38,7 @@ public class Order implements Customizable {
 	 */
 	public Order(int orderNum) {
 		this.orderNum = orderNum;
-		orderItems = new ArrayList<MenuItem>();
+		orderItems = new ArrayList<MenuItemTemplate>();
 	}
 
 	/**
@@ -51,10 +53,10 @@ public class Order implements Customizable {
 	 *
 	 */
 	public boolean add(Object obj) {
-		if(!(obj instanceof MenuItem)) {
+		if(!(obj instanceof MenuItemTemplate)) {
 			return false;
 		}
-		orderItems.add((MenuItem)obj);
+		orderItems.add((MenuItemTemplate)obj);
 		return true;
 	}
 
@@ -69,10 +71,10 @@ public class Order implements Customizable {
 	 * @return Returns a boolean type. False if not found and true if found and removed.
 	 */
 	public boolean remove(Object obj) {
-		if(!(obj instanceof MenuItem)) {
+		if(!(obj instanceof MenuItemTemplate)) {
 			return false;
 		}
-		MenuItem toRemove = (MenuItem)obj;
+		MenuItemTemplate toRemove = (MenuItemTemplate)obj;
 		for(int i = 0; i < orderItems.size(); i++){
 			String orderStr = orderItems.get(i).toString();
 			if(toRemove.toString().equals(orderStr)){

@@ -1,13 +1,19 @@
 package cs213.jpsr;
 
+import java.util.LinkedList;
+
+import cs213.jpsr.interfaces.Customizable;
+import cs213.jpsr.interfaces.CustomizableDecoration;
+
 public abstract class CustomizableMenuItem extends MenuItem implements Customizable {
-    private CustomizableDecoration<MenuItem> head;
+    private LinkedList<MenuItem> head;
     private int decorationCount;
     public CustomizableMenuItem(){
         super();
         this.head = null;
         this.decorationCount = 0;
     }
+    @Override
     //USE FUNCTIONAL METHODS~
     public boolean add(Object obj){
         if(obj instanceof MenuItem){

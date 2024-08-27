@@ -1,4 +1,4 @@
-package cs213.jpsr;
+package cs213.jpsr.Abstractions;
 
 /**
  * An interface that is implemented in classes to add or remove objects as per required.
@@ -10,4 +10,6 @@ public interface Customizable {
     boolean add(Object obj);
 
     boolean remove(Object obj);
+
+    
 }
