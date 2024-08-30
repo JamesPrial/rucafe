@@ -1,3 +1,7 @@
+package cs213.jpsr;
+
+import cs213.jpsr.Abstractions.Customizable;
+
 public class MenuItemPriceInterpretor {
     private static final double CAKE_PRICE = 1.59;
     private static final double HOLE_PRICE = 0.33;
@@ -13,7 +17,7 @@ public class MenuItemPriceInterpretor {
         return instance;
     }
 
-    public double getPrice(MenuItem item){
+    public double getPrice(MenuItemTemplate item){
         double price = 0;
         if(item instanceof Customizable){
 

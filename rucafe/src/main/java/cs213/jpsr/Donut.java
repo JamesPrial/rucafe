@@ -1,6 +1,8 @@
+package cs213.jpsr;
 
 
-public class Donut extends MenuItem {
+
+public class Donut extends MenuItemTemplate {
     
 
     private DonutFlavors flavor;
@@ -20,6 +22,30 @@ public class Donut extends MenuItem {
         super(price);
         this.flavor = flavor;
         this.type = type;
+    }
+
+    public DonutFlavors getFlavor(){
+        return flavor;
+    }
+
+    public DonutTypes getType(){
+        return type;
+    }
+
+
+    @Override
+    public int compareTo(Object obj){
+        int differences = super.compareTo(obj);
+        if(differences < 0){
+            return differences--;
+        }
+        if(obj instanceof Donut){
+            Donut donutObj = (Donut)obj;
+            if(donutObj.getFlavor() == this.flavor && donutObj.getType() == this.type){
+                return differences;
+            }
+        }
+        return differences++;
     }
     public Donut copy(){
         return new Donut(this.getPriceState(), this.flavor, this.type);

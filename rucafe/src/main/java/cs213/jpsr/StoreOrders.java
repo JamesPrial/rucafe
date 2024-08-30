@@ -1,4 +1,8 @@
+package cs213.jpsr;
+
 import java.util.ArrayList;
+
+import cs213.jpsr.Abstractions.Customizable;
 
 /**
  * A class defines the methods and variables required
