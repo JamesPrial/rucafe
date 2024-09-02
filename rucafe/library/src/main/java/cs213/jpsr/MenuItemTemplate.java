@@ -12,7 +12,7 @@ package cs213.jpsr;
 public abstract class MenuItemTemplate implements MenuItem{
 	private double price;
 	private int orderNum;
-	private List head;
+	private CustomizableList addIns;
 
 	public MenuItemTemplate(){
 		this.price = 0;
@@ -51,6 +51,10 @@ public abstract class MenuItemTemplate implements MenuItem{
 		return this.orderNum;
 	}
 
+	public CustomizableList getAddIns(){
+		return addIns;
+	}
+
 	
 	/**
 	 * updates this.price based on current state
@@ -81,5 +85,12 @@ public abstract class MenuItemTemplate implements MenuItem{
 		int orderNumComp = this.getOrderNum() - obj.getOrderNum();
 		return Math.abs(priceComp) + Math.abs(orderNumComp);
 	}
-	
+	@Override
+	public boolean equals(Object obj){
+		if(obj instanceof MenuItemTemplate){
+			MenuItemTemplate MenuItemObj = (MenuItemTemplate)obj;
+			return (this.itemPrice() == MenuItemObj.itemPrice()) && (this.orderNum == MenuItemObj.getOrderNum()) && (this.addIns.equals(MenuItemObj.getAddIns()));
+		}
+		return false;
+	}
 }

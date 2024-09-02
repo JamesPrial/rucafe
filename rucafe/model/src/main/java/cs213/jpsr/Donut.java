@@ -50,4 +50,13 @@ public class Donut extends MenuItemTemplate {
     public Donut copy(){
         return new Donut(this.getPriceState(), this.flavor, this.type);
     }
+
+    @Override
+    public boolean equals(Object obj){
+        if(obj instanceof Donut){
+            Donut donutObj = (Donut)obj;
+            return super.equals(obj) && this.flavor.equals(donutObj.getFlavor()) && this.type.equals(donutObj.getType());
+        }
+        return false;
+    }
 }
