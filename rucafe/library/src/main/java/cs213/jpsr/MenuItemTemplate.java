@@ -1,5 +1,7 @@
 package cs213.jpsr;
 
+import cs213.jpsr.CustomizableUtil.CustomizableList;
+
 /**
  * A class defining the Menu Items of the store.
  * This class helps defining the basic functions which are

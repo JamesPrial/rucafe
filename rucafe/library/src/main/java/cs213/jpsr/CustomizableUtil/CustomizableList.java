@@ -1,7 +1,12 @@
-package cs213.jpsr;
+package cs213.jpsr.CustomizableUtil;
 
-public class CustomizableList<T extends Comparable<Object>> implements Customizable {
-    private CustomizableDecoration<T> head;
+import java.util.ArrayList;
+
+import cs213.jpsr.interfaces.Customizable;
+import cs213.jpsr.interfaces.RUCafeObject;
+
+public class CustomizableList<E extends RUCafeObject> implements Customizable, RUCafeObject {
+    private ArrayList<E> list;
     public CustomizableList(){
         head = null;
     }

@@ -8,6 +8,7 @@
     <module>model</module>
     <module>library</module>
     <module>view</module>
+    <module>interfaces</module>
   </modules>
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>

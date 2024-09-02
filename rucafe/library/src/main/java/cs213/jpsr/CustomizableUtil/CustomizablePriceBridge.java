@@ -1,4 +1,4 @@
-package cs213.jpsr;
+package cs213.jpsr.CustomizableUtil;
 
 public class CustomizablePriceBridge {
     public static CustomizablePriceBridge instance = null;

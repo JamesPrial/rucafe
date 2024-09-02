@@ -1,4 +1,4 @@
-package cs213.jpsr;
+package cs213.jpsr.CustomizableUtil;
 
 public abstract class CustomizableTemplate<T> implements Customizable {
     private CustomizableDecoration<T> head;

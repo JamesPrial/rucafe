@@ -1,6 +1,8 @@
-package cs213.jpsr;
+package cs213.jpsr.CustomizableUtil;
 
-public class CustomizableDecoration<T extends Comparable<Object>> {
+import cs213.jpsr.interfaces.RUCafeObject;
+
+public class CustomizableDecoration<T extends RUCafeObject> {
     private T decoration;
     private CustomizableDecoration<T> next;
     public CustomizableDecoration() throws Exception{
@@ -20,6 +22,11 @@ public class CustomizableDecoration<T extends Comparable<Object>> {
     public T getDecoration(){
         return decoration;
     }
+
+    public void setDecoration(T newDec){
+        this.decoration = newDec;
+    }
+
     public boolean add(Comparable<Object> obj){
         if(decoration.compareTo(obj) < 0){
             return false;

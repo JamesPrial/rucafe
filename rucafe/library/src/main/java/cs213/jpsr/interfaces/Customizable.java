@@ -1,4 +1,4 @@
-package cs213.jpsr;
+package cs213.jpsr.interfaces;
 
 /**
  * An interface that is implemented in classes to add or remove objects as per required.
