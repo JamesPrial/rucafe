@@ -106,8 +106,10 @@ public class Coffee extends MenuItemTemplate implements Customizable {
 	}
 
 	@Override
-	public int compareTo(Object obj){
-		
+	public boolean equals(Object obj){
+		if(obj instanceof Coffee){
+			
+		}
 	}
 }
 

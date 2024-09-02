@@ -1,8 +1,8 @@
 package cs213.jpsr;
 
 public class CustomizableDecoration<T extends Comparable<Object>> {
-    T decoration;
-    CustomizableDecoration<T> next;
+    private T decoration;
+    private CustomizableDecoration<T> next;
     public CustomizableDecoration() throws Exception{
         throw new Exception();
     }
@@ -19,6 +19,14 @@ public class CustomizableDecoration<T extends Comparable<Object>> {
     }
     public T getDecoration(){
         return decoration;
+    }
+    public boolean add(Comparable<Object> obj){
+        if(decoration.compareTo(obj) < 0){
+            return false;
+        }
+        if(next == null){
+            this.next = new CustomizableDecoration<>()
+        }
     }
 }
 
