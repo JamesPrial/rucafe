@@ -1,6 +1,4 @@
-package library;
-
-import cs213.jpsr.MenuItemTemplate;
+package library.Abstractions;
 
 public interface MenuItemAbstractFactory {
     public MenuItemTemplate createMenuItem();

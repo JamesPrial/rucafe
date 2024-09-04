@@ -1,4 +1,4 @@
-package library;
+package library.Abstractions;
 
 public class MenuItemPriceInterpretor {
     private static final double CAKE_PRICE = 1.59;
