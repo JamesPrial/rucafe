@@ -2,6 +2,8 @@ package cs213.jpsr;
 
 import java.util.ArrayList;
 
+import cs213.jpsr.enums.CoffeeAddIns;
+
 public class Coffee extends MenuItemTemplate implements Customizable {
 	private final int SHORT = 0;
 	private final int TALL = 1;

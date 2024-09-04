@@ -1,6 +1,7 @@
 package cs213.jpsr;
 
-
+import cs213.jpsr.enums.DonutTypes;
+import cs213.jpsr.interfaces.DonutFlavors;
 
 public class Donut extends MenuItemTemplate {
     

@@ -1,4 +1,4 @@
-package cs213.jpsr;
+package cs213.jpsr.enums;
 
 /** @enum mapper::DonutFlavors
  *

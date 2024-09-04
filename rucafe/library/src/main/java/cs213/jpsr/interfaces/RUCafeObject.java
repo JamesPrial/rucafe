@@ -11,4 +11,6 @@ public interface RUCafeObject extends Comparable<Object> {
         }
         throw new UnsupportedOperationException("Cannot compare RUCafeObjects to non-RUCafeObjects");
     }
+    
+    
 }

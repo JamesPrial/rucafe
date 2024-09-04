@@ -4,27 +4,34 @@ import cs213.jpsr.interfaces.RUCafeObject;
 
 public class CustomizableDecoration<T extends RUCafeObject> {
     private T decoration;
-    private CustomizableDecoration<T> next;
+    private int quantity;
     public CustomizableDecoration() throws Exception{
         throw new Exception();
     }
     public CustomizableDecoration(T decoration){
         this.decoration = decoration;
-        this.next = null;
+        this.quantity = 1;
     }
-    public CustomizableDecoration(T decoration, CustomizableDecoration<T> next){
+    public CustomizableDecoration(T decoration, int quantity){
         this.decoration = decoration;
-        this.next = next;
+        this.quantity = quantity;
     }
-    public CustomizableDecoration<T> getNext(){
-        return next;
+    public int getQuantity(){
+        return quantity;
     }
     public T getDecoration(){
         return decoration;
     }
 
-    public void setDecoration(T newDec){
-        this.decoration = newDec;
+    
+
+    public boolean equals(Object obj){
+        if(obj instanceof CustomizableDecoration<?>){
+            CustomizableDecoration<?> customizableDecorationObj = (CustomizableDecoration<?>)(obj);
+            RUCafeObject objDec = customizableDecorationObj.getDecoration();
+            return decoration.equals(objDec) && this.quantity == customizableDecorationObj.getQuantity();
+        }
+        return false;
     }
 
     public boolean add(Comparable<Object> obj){
