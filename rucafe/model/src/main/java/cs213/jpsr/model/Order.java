@@ -1,8 +1,8 @@
-package cs213.jpsr;
+package model;
 
 import java.util.ArrayList;
 
-import library.MenuItemTemplate;
+import library.Abstractions.MenuItemTemplate;
 
 /**
  * The order class helps defining the properties of order which implements

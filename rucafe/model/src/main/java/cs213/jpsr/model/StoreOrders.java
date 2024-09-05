@@ -1,4 +1,4 @@
-package cs213.jpsr;
+package model;
 
 import java.util.ArrayList;
 

@@ -1,7 +1,9 @@
+package model;
+
 import java.util.ArrayList;
 
-import library.MenuItemTemplate;
-import library.enums.CoffeeAddIns;
+import library.Abstractions.MenuItemTemplate;
+import library.enums.CoffeeAddInbhjmbms;
 
 public class Coffee extends MenuItemTemplate implements Customizable {
 	private final int SHORT = 0;
